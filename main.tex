@@ -16,7 +16,9 @@
 
 \section{Kompleks analyse og frekvensrespons}
 
-Kompleks analyse dreier seg om funksjoner $f:\mathbb{C} \longrightarrow \mathbb{C}$. Vi trenger noen definisjoner og teoremer fra kompleksanalysen for å utlede frekvensresponsen, hovedsakelig et verktøy for beregning av komplekse integraler som kalles \textit{residyregning}. Til å begynne med må vi derfor legge ned noen grunnleggende definisjoner. Merk at stringens i dette dokumentet vil være generelt svært manglende, og detaljer dessverre må utelates. Likevel prøver vi på en nogenlunde stringent oppbygning.
+Dette dokumentet innneholder en utledning av frekvensresponsen som er minimal i den betydningen at den ikke forutsetter tidligere kunnskap om kompleks analyse / kompleks integrasjon. Det bør være mulig å følge utledningene så lenge man kan å integrere, er kjent med differensiallikninger og er komfortabel med komplekse tall. Det er selvfølgelig også lurt å ha sett frekvensresponsen til et lineært system før.
+
+Kompleks analyse dreier seg om funksjoner $f:\mathbb{C} \longrightarrow \mathbb{C}$. Vi trenger noen definisjoner og teoremer fra kompleksanalysen for å utlede frekvensresponsen, hovedsakelig et verktøy for beregning av komplekse integraler som kalles \textit{residyregning}. Vi starter derfor med å definere de sentrale begrepene innen kompleks integrasjon og derivasjon, og så introduserer vi residyer. Til slutt beviser vi at frekvensresponsen blir det vi vet at den er.
 
 \subsection{Fundamentale definisjoner}
 
@@ -315,7 +317,6 @@ Det er selvfølgelig et teorem som sier at laplace og invers-laplace kansellerer
 
 Med disse verktøyene vi nå har under beltet kan vi endelig vise hvorfor uttrykket for frekvensresponsen er slik som det er.
 
-% NO
 \begin{theorem}[Frekvensresponsen]
     Gitt et signal $u(t) = \sin(\omega t)$, en transferfunksjon (signal) $h:\mathbb{R} \longrightarrow \mathbb{R}$ er steady-state responsen et signal $y(t) = (h * u)(t)$, hvor $*$ betegner konvolusjon gitt ved $y(t) = |H(i\omega)|sin(\omega t + \angle H(j\omega))$, hvor $H(s)$ er Laplaceomvendingen til $h(t)$.
 \end{theorem}
@@ -353,11 +354,5 @@ Med disse verktøyene vi nå har under beltet kan vi endelig vise hvorfor uttryk
         & = |H(i\omega)| sin(\omega t + \angle H(j \omega)).
     \end{align}
 \end{proof}
-
-\section{Avslutning}
-
-Hvis du leste helt hit, takk! Jeg begynte å skrive dette dokumentet da jeg ble spurt av en uvitende førsteklassing om hvordan man utleder frekvensresponsen, hvor de også viste meg en ganske utilfredsstillende utledning gitt av en professor på ITK.
-Jeg, i mitt hovmod antok at oppgaven var enkel og lovte å levere en full utledning av hvorfor frekvensresponsen er som den er. Dette viste seg å være vanskeligere enn jeg først hadde trodd. Det tok ikke særlig lang tid å finne løsningen i Balchen, Andresen og Foss' regtek-bok, men for å bevare matematisk stringens anså jeg det som nødvendig å inkludere noen fundamentale resultater fra kompleks analyse (et fag jeg selv ikke engang har hatt, jeg har hovedsakelig lent meg på wikipedia og andre nettressurser).
-Det hele førte til en lang arbeidsprosess hvor jeg ble tvunget til å lære residyregning, laplaceinversomvending og deler av kompleks analyse på nytt, noe jeg er veldig takknemlig for. Når det er sagt vil jeg be om at ingen noen gang spør meg om å gjøre noe slikt igjen, da dette har tatt \textit{mye} lengre tid enn jeg hadde forventet at det skulle ta (jeg har fullstending begått alt jeg skulle gjøre av skolerbeid).
 
 \end{document}
